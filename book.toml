@@ -4,3 +4,10 @@ language = "en"
 multilingual = false
 src = "src"
 title = "FalconMC Documentation"
+
+[rust]
+edition = "2021"
+
+[output.html]
+git-repository-url = "https://github.com/FalconMC-Dev/docs"
+
