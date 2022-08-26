@@ -46,7 +46,7 @@ Crates that define **macros**:
 
 - **`falcon_proc_util`**: Utility crate for macro error handling.
 
-- **`falcon_protocol_util`**: Utility crate exporting common structs used by both `falcon_receive` and `falcon_send`.
+- **`falcon_protocol_util`**: Utility crate exporting common structs used by both `falcon_receive_derive` and `falcon_send_derive`.
 
 - **`falcon_send_derive`**: Macro crate exporting an attribute macro used throughout all of the `falcon_send` crate.
 
