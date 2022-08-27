@@ -4,6 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "FalconMC Documentation"
+description = "The official FalconMC wiki and documentation. FalconMC allows you to host a minecraft server that efficiently uses minimal resources. This never compromises speed and performance. This wiki explains everything you need to know about setting up a server, contributing to the project or contacting us."
 
 [rust]
 edition = "2021"
