@@ -1,8 +1,8 @@
 # Introduction
 
-Welcome to the official [`FalconMC (org)`](https://github.com/FalconMC-Dev) docs, thank you for reading!
+Welcome to the official [`FalconMC (org)`](https://github.com/FalconMC-Dev) wiki, thank you for reading!
 
-These docs are meant to cover all of the projects maintained by the `FalconMC` organization.
+This wiki is meant to cover all of the projects maintained by the `FalconMC` organization.
 ## Projects
 The projects maintained by `FalconMC` at the time of writing are:
 - [`FalconMC`](https://github.com/FalconMC-Dev/FalconMC):
@@ -12,7 +12,7 @@ The projects maintained by `FalconMC` at the time of writing are:
     A `CLI` tool to convert schematics between versions as best as possible.
     This is also used to generate code for `FalconMC` where it needs to know
     about the different assets of the game.
-- [`These docs`](https://github.com/FalconMC-Dev/docs):
+- [`This wiki`](https://github.com/FalconMC-Dev/docs):
     An attempt at providing up to date documentation as much as possible
     for the projects listed above, there is the
     [`stable`](https://wiki.falconmc.org/) and [`bleeding edge`](https://wiki.falconmc.org/dev/) documentation.
