@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://wiki.falconmc.org/sitemap-main.xml
+Sitemap: https://wiki.falconmc.org/dev/sitemap-dev.xml
+

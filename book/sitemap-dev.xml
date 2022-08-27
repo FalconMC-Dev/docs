@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset>
+   <url>
+      <loc>wiki.falconmc.org/dev/</loc>
+      <priority>1.é</priority>
+   </url>
+   <url>
+      <loc>wiki.falconmc.org/dev/datacompat/developer/architecture.md</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>wiki.falconmc.org/dev/introduction.md</loc>
+      <priority>1.2</priority>
+   </url>
+   <url>
+      <loc>wiki.falconmc.org/dev/falconmc/developer/architecture.md</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>wiki.falconmc.org/dev/falconmc/user/setup.md</loc>
+      <priority>1.0</priority>
+   </url>
+</urlset>
