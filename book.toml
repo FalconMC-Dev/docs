@@ -11,6 +11,8 @@ edition = "2021"
 
 [output.html]
 git-repository-url = "https://github.com/FalconMC-Dev/docs"
+default-theme = "rust"
+preferred-dark-theme = "rust"
 
 [preprocessor]
 
