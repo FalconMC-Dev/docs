@@ -14,11 +14,10 @@ This is a listing of all the crates in falcon at the time of writing:
 Crates that define the **core definitions**:
 
 - **`falcon_core`**: This crate contains all the basic data definitions that are used throughout all of falcon.
-    This includes block, location, configuration and schematic definitions as well as abstract network
-    traits that describe the behavior of packets and network I/O. This includes in particular `ConnectionLogic`.
+    This includes block, location, configuration and schematic definitions.
 
-- **`falcon_core_derive`**: This crate exports a derive macro for the `PacketEncode` and `PacketDecode` traits
-    defined in `falcon_core`. That macro is re-exported in `falcon_core` and should thus only be used through falcon_core.
+- **`falcon_packet_core`**: This crate defines the base traits for serializing and deserializing data types according to the minecraft protocol.
+  These are 6 traits with a design very similar to [serde](https://serde.rs).
 
 Crates that define the **network protocols**:\
 (Note that these crates may be better suited to be in a separate repository in the future):
@@ -48,11 +47,47 @@ Crates that define **macros**:
 
 - **`falcon_protocol_util`**: Utility crate exporting common structs used by both `falcon_receive_derive` and `falcon_send_derive`.
 
+- **`falcon_packet_core_derive`**: Derive macros for the 6 traits defined in the `falcon_packet_core` crate.
+
 - **`falcon_send_derive`**: Macro crate exporting an attribute macro used throughout all of the `falcon_send` crate.
 
 - **`falcon_receive_derive`**: Macro crate exporting an attribute macro used throughout all of the `falcon_receive` crate.
 
 ## Crate dependency graph
 
-**TODO**: *Include mermaid graph*
+---
+
+The dashed lines refer to proc-macro crates.
+
+
+```plantuml
+@startuml
+object falcon_packet_core_derive
+object falcon_packet_core
+object falcon_core
+object falcon_send
+object falcon_logic
+object falcon_receive
+object falcon_main
+object falcon_send_derive
+object falcon_receive_derive
+object falcon_protocol_util
+object falcon_proc_util
+
+falcon_packet_core ..> falcon_packet_core_derive
+falcon_send --> falcon_core
+falcon_send --> falcon_packet_core
+falcon_send .> falcon_send_derive
+falcon_send_derive ..> falcon_protocol_util
+falcon_receive_derive ..> falcon_protocol_util
+falcon_send_derive ..> falcon_proc_util
+falcon_receive_derive ..> falcon_proc_util
+falcon_protocol_util ..> falcon_proc_util
+falcon_logic --> falcon_send
+falcon_receive --> falcon_logic
+falcon_receive .> falcon_receive_derive
+falcon_main --> falcon_logic
+falcon_main --> falcon_receive
+@enduml
+```
 

@@ -4,6 +4,8 @@
 
 To guarantee performance, the packet pipeline should be one of the most optimized components of FalconMC.
 
+Note that in the diagrams shown below, compression and encryption have not been implemented yet.
+
 ### Receiving process
 Shown below is a flowchart of the receiving end of a connection:
 
@@ -14,10 +16,10 @@ repeat
 if (Check <b>packet_len</b>) then (Some(len))
     :Read max from socket/
 else (None)
-    :Read 8kb from socket/
+    :Read 4kb from socket/
     :Set <b>packet_len</b> to length\nread from buffer;
     :Reserve <b>packet_len</b> bytes in buffer;
-    if (Is <b>packet_len</b> > 8kb?) then (yes)
+    if (Is <b>packet_len</b> > 4kb?) then (yes)
         :Set <b>is_large</b> to true;
     else (no)
         if (Is <b>is_large</b>?) then (yes)
